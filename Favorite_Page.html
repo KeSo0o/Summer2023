@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Favorite_Page.css">
+    <title>My favorite</title>
+</head>
+<body>
+
+
+    <section>
+       <!-- Navbar Start --> 
+       <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.webp" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Favorite_Page.html">Profile</a></li>
+                    <li><a href="404.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+     <!-- Navbar End --> 
+
+
+<!-- First Page Start --> 
+
+<h1 class="centered-text">My Favorite</h1>
+    
+<!-- First Page End --> 
+
+</section>
+
+ <!-- Background start --> 
+    <script src="https://cdn.jsdelivr.net/npm/three@0.131.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "section", // Apply the effect to the entire page
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 0, // Set to 0 or remove these lines
+        minWidth: 0, // Set to 0 or remove these lines
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xffffff
+        });
+    </script>
+    <!-- Background End --> 
+</body>
+</html>

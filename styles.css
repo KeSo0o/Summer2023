@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* First Page Start */
+
+/* Text Start*/
+h1,
+p,
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+/* Text End*/
+
+
+
+/* Navbar Start*/
+
+header {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+h1,
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    font-size: 20px;
+}
+
+/* Navbar End*/
+
+/* "Tell me a joke" text Start*/
+
+@keyframes moveUpDown {
+    0% {
+        top: 50%;
+    }
+
+    50% {
+        top: 5%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+#text {
+    font-size: 35px;
+}
+
+#rectangle {
+    animation: moveUpDown 3s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 250px;
+    height: 130px;
+    background-color: #FEF3C7;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* "Tell me a joke" text End*/
+
+
+/* "Funny Website" text Start*/
+
+#animatedText {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(-100%);
+    animation: slideInOut 10s linear infinite;
+    white-space: nowrap;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #FDE68A;
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    25% {
+        transform: translateX(3%);
+    }
+
+    75% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* "Funny Website" text End*/
+
+
+/* "Twisted" text Start*/
+#twistedText {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    animation: upAndDown 2s ease-in-out infinite;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #D9F99D;
+}
+
+#twistedText:hover {
+    transform: translateX(10px);
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-5px);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) translateY(5px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-5px);
+    }
+}
+/* "Twisted" text End*/
+
+/* "Wicked" text Start*/
+.wicked-container {
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.wicked-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 9rem;
+    font-weight: bold;
+    color: #83858E;
+    padding: 10px;
+    margin-top: 41rem;
+    margin-left: 76rem;
+}
+/* "Wicked" text End*/
+
+
+/* "Interesting..." text Start*/
+.text-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.interesting-text {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #BBF7D0;
+    animation: slideDown 3s ease-in-out infinite alternate;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10rem);
+    }
+}
+/* "Interesting..." text End*/
+/* First Page End */
+
+/* Second Page Start */
+
+/* Cards Start*/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    position: relative;
+    width: 240px;
+    height: 300px;
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    border-radius: 9px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #f2f2f2;
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background-color: #475569;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.card img {
+    border-radius: 9px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card_button {
+    border-radius: 7px;
+    border: none;
+    background-color: #FEF3C7;
+    padding: 15px 71px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.card_button:hover {
+    background-color: #9A947A;
+}
+
+.card_title {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.card_description {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+}
+
+/* Cards End*/
+/* Second Page End */
+
+.page_3 {
+    width: 80vh;
+    height: 80vh;
+}

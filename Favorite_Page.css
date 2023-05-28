@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Text Start*/
+h1,
+p,
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+/* Text End*/
+
+
+
+/* Navbar Start*/
+
+header {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+h1,
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Navbar End*/
+
+/* Firstpage Start*/
+
+
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 8rem;
+    margin-top: 11rem;
+    color: white;
+  }
+
+
+/* Firstpage End */
